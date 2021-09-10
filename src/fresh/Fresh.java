@@ -3,11 +3,12 @@ package fresh;
 public class Fresh {
 
     public static void main(String[] args) {
-        
-        System.out.println("Hello World");
-        
-        System.out.println("Hey from GitHub!");       
-        
+
+        LinkedList ll = new LinkedList();
+        ll.addNode(10);
+        ll.addNode(20);
+        ll.addNode(30);
+        ll.printList();
      
     }
 }
