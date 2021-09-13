@@ -13,10 +13,11 @@ class Node {
 
 public class LinkedList {
 
-    Node root;
-    Node current;
+    static Node root;
+    static Node current;
+    static Node header;
 
-    public void addNode(int value) {
+    static void addNode(int value) {
 
         Node newNode = new Node(value, null);
 
@@ -33,7 +34,37 @@ public class LinkedList {
         }
     }
 
-    public void printList() {
+    static void removeNode(int value) {
+
+        current = root;
+        header = current;
+
+        while (current != null) {
+
+            if (current.next != null && current.value != value) {
+
+                current = current.next;
+                System.out.println("current.next");
+
+            } else if (current.value == value) {
+
+                current = header;
+                current = current.next.next;
+                System.out.println("header.next removed: " + header.next.value);
+             
+                header.next = null;
+                   
+                break;
+
+            }
+                
+                header = current;
+                System.out.println("header points to current: " + header.value);
+            
+        }
+    }
+
+    static void printList() {
 
         current = root;
 
@@ -46,10 +77,21 @@ public class LinkedList {
             while (current != null) {
 
                 System.out.println(current.value);
-                
+
                 current = current.next;
 
             }
         }
+    }
+
+    public static void main(String[] args) {
+
+        addNode(10);
+        addNode(20);
+        addNode(30);
+        addNode(40);
+        printList();
+        removeNode(20);
+        printList();
     }
 }
