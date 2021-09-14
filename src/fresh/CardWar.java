@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class TexasHoldem {
+public class CardWar {
 
     static int counter = 1;
     static int count = 0;
@@ -108,6 +108,8 @@ public class TexasHoldem {
 
         System.out.println("\n\n");
     }
+    
+    
 
     public static void main(String[] args) {
 
