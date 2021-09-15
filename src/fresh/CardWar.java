@@ -3,6 +3,7 @@ package fresh;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Scanner;
 
 public class CardWar {
 
@@ -108,8 +109,37 @@ public class CardWar {
 
         System.out.println("\n\n");
     }
-    
-    
+
+    static void playWar() {
+
+        int x = 0;
+        String pOne;
+        String pTwo;
+        String pThree;
+        String pFour;
+
+        Scanner key = new Scanner(System.in);
+
+        switch (x) {
+            case 0:
+
+                break;
+            case 1:
+                
+                break;
+            case 2:
+
+                break;
+            case 3:
+
+                break;
+            case 4:
+                break;
+        }
+        
+        x++;
+
+    }
 
     public static void main(String[] args) {
 
@@ -118,6 +148,8 @@ public class CardWar {
         shuffleDeck();
         distributeToPlayers();
         printAll();
+        playWar();
 
     }
+
 }
